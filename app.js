@@ -8,6 +8,7 @@ const encrypt = require("mongoose-encryption");
 
 const app = express();
 
+console.log(process.env.API_KEY);
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
@@ -70,5 +71,6 @@ app.post("/login",function(req,res){
   });
 });
 
-app.listen(port, () => console.log(`Server started at port: ${port}`)
-);
+app.listen(3000, function(){
+  console.log("Server started at port 3000")
+});
